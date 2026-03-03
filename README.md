@@ -1,3 +1,6 @@
+<img width="2553" height="1295" alt="Captura de tela 2026-03-03 170202" src="https://github.com/user-attachments/assets/7360c5fb-200c-4e97-ac69-f3dad4aa3907" />
+
+
 # 📈 Brazilian Fintech Dashboard & Projection Engine
 
 A modern, high-performance financial dashboard built with **React**, **Vite**, and **Tailwind CSS**. Designed specifically for the Brazilian stock market (B3), this application allows investors to track real-time stock and REIT (FIIs) quotes, analyze portfolio dividends, and simulate long-term compound interest scenarios through an advanced graphical visualization engine.
