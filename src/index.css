@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface-900 text-gray-100 font-sans antialiased;
+    background-image:
+      radial-gradient(ellipse at 20% 50%, rgba(0, 186, 255, 0.04) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(16, 185, 129, 0.03) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-1.5;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-surface-800;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-500 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent-600;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface-800 border border-white/5 rounded-2xl shadow-card;
+    background-image: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 60%);
+  }
+
+  .card-hover {
+    @apply card transition-all duration-300 cursor-pointer;
+  }
+
+  .card-hover:hover {
+    @apply border-accent-500/20 shadow-glow-accent transform -translate-y-0.5;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .badge-bull {
+    @apply badge bg-bull-500/15 text-bull-400 border border-bull-500/20;
+  }
+
+  .badge-bear {
+    @apply badge bg-bear-500/15 text-bear-400 border border-bear-500/20;
+  }
+
+  .badge-neutral {
+    @apply badge bg-accent-500/15 text-accent-400 border border-accent-500/20;
+  }
+
+  .badge-fii {
+    @apply badge bg-gold-500/15 text-gold-400 border border-gold-500/20;
+  }
+
+  .badge-etf {
+    @apply badge bg-purple-500/15 text-purple-400 border border-purple-500/20;
+  }
+
+  .input-field {
+    @apply bg-surface-700 border border-white/10 rounded-xl px-4 py-2.5 text-gray-200
+           placeholder-gray-500 text-sm focus:outline-none focus:border-accent-500/50
+           focus:ring-1 focus:ring-accent-500/30 transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-accent-500 hover:bg-accent-400 text-surface-900 font-semibold px-4 py-2 rounded-xl
+           transition-all duration-200 text-sm flex items-center gap-2;
+  }
+
+  .stat-label {
+    @apply text-xs text-gray-500 uppercase tracking-wider font-medium;
+  }
+
+  .stat-value {
+    @apply text-2xl font-bold text-white font-mono;
+  }
+
+  .section-title {
+    @apply text-xs text-gray-500 uppercase tracking-widest font-semibold mb-3;
+  }
+}
+
+@layer utilities {
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(255,255,255,0.0) 0%,
+      rgba(255,255,255,0.05) 50%,
+      rgba(255,255,255,0.0) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-accent-400 to-accent-300 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-bull {
+    @apply bg-gradient-to-r from-bull-400 to-bull-300 bg-clip-text text-transparent;
+  }
+}
